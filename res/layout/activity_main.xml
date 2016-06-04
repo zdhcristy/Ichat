@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:zdh="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/bottom_tab_bg"
+        android:orientation="horizontal" >
+        
+        <com.example.ichat.ChangeColorOfBottomView
+            android:id="@+id/bottom_menu_find"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:background="@drawable/green_selector"
+            zdh:color="@color/green"
+            zdh:icon="@drawable/bottom_menu_find"
+            zdh:text="@string/bottom_menu_find"
+            zdh:text_size="12sp" />
+        
+        <com.example.ichat.ChangeColorOfBottomView
+            android:id="@+id/bottom_menu_chat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:background="@drawable/green_selector"
+            zdh:color="@color/green"
+            zdh:icon="@drawable/bottom_menu_chat"
+            zdh:text="@string/bottom_menu_chat"
+            zdh:text_size="12sp" />
+        
+        <com.example.ichat.ChangeColorOfBottomView
+            android:id="@+id/bottom_menu_contacts"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:background="@drawable/green_selector"
+            zdh:color="@color/green"
+            zdh:icon="@drawable/bottom_menu_contacts"
+            zdh:text="@string/bottom_menu_contacts"
+            zdh:text_size="12sp" />
+        
+        <com.example.ichat.ChangeColorOfBottomView
+            android:id="@+id/bottom_menu_me"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:background="@drawable/green_selector"
+            zdh:color="@color/green"
+            zdh:icon="@drawable/bottom_menu_me"
+            zdh:text="@string/bottom_menu_me"
+            zdh:text_size="12sp" />  
+               
+    </LinearLayout>
+    
+</LinearLayout>

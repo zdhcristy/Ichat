@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <SearchView
+        android:id="@+id/search_friends"
+        android:layout_width="match_parent" 
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:queryHint="Ichat号/手机号"
+        android:inputType="textAutoComplete"
+        android:imeOptions="actionSearch"
+        android:background="#FFFFFF" />
+    
+    <TextView
+        android:layout_width="match_parent"
+		android:layout_height="44dp"
+        android:padding="12dp"
+        android:gravity="center_horizontal"
+		android:textSize="12sp"
+		android:text="我的Ichat号：fdsf" />
+   
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"  >
+        <ImageView
+            android:layout_width="wrap_content"
+   			android:layout_height="50dp"
+   			android:layout_marginLeft="10dp"
+   			android:src="@drawable/item_scan" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:padding="12dp"
+   			android:layout_height="50dp"
+   			android:textSize="18sp"
+   			android:text="雷达加朋友" />
+    </LinearLayout>
+   
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"  >
+        <ImageView
+            android:layout_width="wrap_content"
+   			android:layout_height="50dp"
+   			android:layout_marginLeft="10dp"
+   			android:src="@drawable/item_scan" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:padding="12dp"
+   			android:layout_height="50dp"
+   			android:textSize="18sp"
+   			android:text="面对面建群" />
+    </LinearLayout>
+   
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"  >
+        <ImageView
+            android:layout_width="wrap_content"
+   			android:layout_height="50dp"
+   			android:layout_marginLeft="10dp"
+   			android:src="@drawable/item_scan" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:padding="12dp"
+   			android:layout_height="50dp"
+   			android:textSize="18sp"
+   			android:text="扫二维码" />
+    </LinearLayout>
+   
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"  >
+        <ImageView
+            android:layout_width="wrap_content"
+   			android:layout_height="50dp"
+   			android:layout_marginLeft="10dp"
+   			android:src="@drawable/item_scan" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:padding="12dp"
+   			android:layout_height="50dp"
+   			android:textSize="18sp"
+   			android:text="公众号" />
+    </LinearLayout>
+</LinearLayout>

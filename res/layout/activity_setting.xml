@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:layout_width="match_parent"
+		android:layout_height="44dp"
+		android:layout_marginTop="16dp"
+        android:padding="10dp"
+        android:background="#FFFFFF"
+		android:textSize="18sp"
+		android:text="消息提醒" />
+    
+    <TextView
+        android:layout_width="match_parent"
+		android:layout_height="44dp"
+		android:layout_marginTop="2dp"
+        android:padding="10dp"
+        android:background="#FFFFFF"
+		android:textSize="18sp"
+		android:text="黑名单" />
+      
+    <TextView
+        android:layout_width="match_parent"
+		android:layout_height="44dp"
+		android:layout_marginTop="2dp"
+        android:padding="10dp"
+        android:background="#FFFFFF"
+		android:textSize="18sp"
+		android:text="清除缓存" />
+    
+    <TextView
+        android:layout_width="match_parent"
+		android:layout_height="44dp"
+		android:layout_marginTop="2dp"
+        android:padding="10dp"
+        android:background="#FFFFFF"
+		android:textSize="18sp"
+		android:text="意见反馈" />
+     
+    <TextView
+        android:layout_width="match_parent"
+		android:layout_height="44dp"
+        android:padding="10dp"
+        android:background="#FFFFFF"
+		android:textSize="18sp"
+		android:text="关于Ichat" />
+</LinearLayout>

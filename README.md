@@ -1,0 +1,2 @@
+# Ichat
+一个仿微信主界面的practice project，使用了自定义View、修改ActionBar的overflowButton的图标、Viewpager+Fragment+ListView、ContentProvider读取本地联系人等。
