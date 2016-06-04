@@ -1,5 +1,6 @@
 # Ichat 简易版微信
-  一个仿微信主界面的practice project
+  
+  
 # Features
 - 修改ActionBar的overflowButton的图标；
 - Viewpager+Fragment+ListView；
