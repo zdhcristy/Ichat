@@ -50,7 +50,7 @@ public class ChatFragment extends Fragment implements OnItemClickListener,IRefre
 		chatList = new ArrayList<ChatItem>();
 		for (int i = 0; i < 18; i++) {
 			ChatItem chatItem = new ChatItem();
-			chatItem.setPictureId(R.drawable.item_group_chat);
+			chatItem.setPictureId(R.drawable.item_chat);
 			chatItem.setContent("大家一起来Ichat聊天"+i);
 			chatList.add(chatItem);
 		}
@@ -94,7 +94,7 @@ public class ChatFragment extends Fragment implements OnItemClickListener,IRefre
 	private void getRefreshData() {
 		for (int i = 0; i < 2; i++) {
 			ChatItem chatItem = new ChatItem();
-			chatItem.setPictureId(R.drawable.item_group_chat);
+			chatItem.setPictureId(R.drawable.item_chat);
 			chatItem.setContent("顶部新增Ichat聊天"+i);
 			chatList.add(chatItem);
 		}
@@ -103,7 +103,7 @@ public class ChatFragment extends Fragment implements OnItemClickListener,IRefre
 	private void getLoadData() {
 		for (int i = 0; i < 2; i++) {
 			ChatItem chatItem = new ChatItem();
-			chatItem.setPictureId(R.drawable.item_group_chat);
+			chatItem.setPictureId(R.drawable.item_chat);
 			chatItem.setContent("底部新增Ichat聊天"+i);
 			chatList.add(chatItem);
 		}

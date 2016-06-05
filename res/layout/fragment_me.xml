@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
    			android:layout_height="55dp"
    			android:layout_marginLeft="10dp"
-   			android:src="@drawable/item_scan" />
+   			android:src="@drawable/login" />
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
    			android:layout_height="55dp"
    			android:layout_marginLeft="10dp"
-   			android:src="@drawable/item_scan" />
+   			android:src="@drawable/gallery" />
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -77,7 +77,7 @@
             android:layout_width="wrap_content"
    			android:layout_height="55dp"
    			android:layout_marginLeft="10dp"
-   			android:src="@drawable/item_scan" />
+   			android:src="@drawable/setting" />
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"

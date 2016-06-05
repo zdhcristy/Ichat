@@ -14,6 +14,7 @@
     <string name="bottom_menu_contacts">通讯录</string>
     <string name="bottom_menu_me">我</string>
     
-    <string name="welcome_text">Welcome To Ichat</string>
+    <string name="welcome_text1">Ichat | </string>
+    <string name="welcome_text2">沟通无限</string>
 
 </resources>

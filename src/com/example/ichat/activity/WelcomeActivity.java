@@ -12,11 +12,12 @@ import android.view.Window;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class WelcomeActivity extends Activity{
 	
-	private TextView welcom_text;
+	private LinearLayout welcomeLayout;
 	private AlphaAnimation start_anima;
 	
 	@Override
@@ -24,14 +25,14 @@ public class WelcomeActivity extends Activity{
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.welcome);
-		welcom_text = (TextView) findViewById(R.id.welcome_text);
+		welcomeLayout = (LinearLayout) findViewById(R.id.welcome_layout);
 		initData();
 	}
 
 	private void initData() {
 		start_anima = new AlphaAnimation(0.1f, 1.0f);
 		start_anima.setDuration(1888);
-		welcom_text.setAnimation(start_anima);
+		welcomeLayout.setAnimation(start_anima);
 		start_anima.setAnimationListener(new AnimationListener() {
 			
 			@Override

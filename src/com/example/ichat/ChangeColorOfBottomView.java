@@ -21,7 +21,7 @@ import android.view.View;
 public class ChangeColorOfBottomView extends View {
 
 	private Bitmap mIconBitmap;
-	private String mText = "·¢ÏÖ";
+	private String mText = "å‘ç°";
 	private float mAlpha;
 	private int mColor = 0xFF45C01A;
 	private int mTextSize = (int) TypedValue.applyDimension(
@@ -45,17 +45,17 @@ public class ChangeColorOfBottomView extends View {
 		this(context, attrs,0);
 	}
 	/**
-	 * ±éÀú»ñÈ¡×Ô¶¨ÒåÊôĞÔµÄÖµ£¬È»ºó¸³¸ø³ÉÔ±±äÁ¿;³õÊ¼»¯³ÉÔ±±äÁ¿
+	 * éå†è·å–è‡ªå®šä¹‰å±æ€§çš„å€¼ï¼Œç„¶åèµ‹ç»™æˆå‘˜å˜é‡;åˆå§‹åŒ–æˆå‘˜å˜é‡
 	 * @param context
 	 * @param attrs
 	 * @param defStyleAttr
 	 */
 	public ChangeColorOfBottomView(Context context, AttributeSet attrs, int defStyleAttr) {
 		super(context, attrs, defStyleAttr);
-		//±éÀúÊôĞÔ£¬ÄÃµ½×Ô¶¨ÒåÊôĞÔµÄÖµ
+		//éå†å±æ€§ï¼Œæ‹¿åˆ°è‡ªå®šä¹‰å±æ€§çš„å€¼
 		TypedArray ta = context.obtainStyledAttributes(attrs, 
 				R.styleable.ChangeColorOfBottomView);
-		//½«»ñÈ¡µÄÖµ¸³¸ø³ÉÔ±±äÁ¿
+		//å°†è·å–çš„å€¼èµ‹ç»™æˆå‘˜å˜é‡
 		for (int i = 0; i < ta.getIndexCount(); i++) {
 			int attr = ta.getIndex(i);
 			switch (attr) {
@@ -73,19 +73,19 @@ public class ChangeColorOfBottomView extends View {
 				break;
 				
 			case R.styleable.ChangeColorOfBottomView_text_size:
-				//×ª»»Îª12sp
+				//è½¬æ¢ä¸º12sp
 				mTextSize = (int) ta.getDimension(attr, TypedValue.applyDimension(
 						TypedValue.COMPLEX_UNIT_SP, 12, getResources().getDisplayMetrics()));
 				break;
 			}
 		}
-		//³õÊ¼»¯³ÉÔ±±äÁ¿Ö®Ç°Òª»ØÊÕTypedArray
+		//åˆå§‹åŒ–æˆå‘˜å˜é‡ä¹‹å‰è¦å›æ”¶TypedArray
 		ta.recycle();
 		mTextBound = new Rect();
 		mTextPaint = new Paint();
 		mTextPaint.setTextSize(mTextSize);
 		mTextPaint.setColor(0xFF555555);
-		//²âÁ¿iconÏÂÎÄ×ÖµÄ·¶Î§
+		//æµ‹é‡iconä¸‹æ–‡å­—çš„èŒƒå›´
 		mTextPaint.getTextBounds(mText, 0, mText.length(), mTextBound);
 	}
 	@Override
@@ -103,31 +103,31 @@ public class ChangeColorOfBottomView extends View {
 	protected void onDraw(Canvas canvas) {
 		canvas.drawBitmap(mIconBitmap, null, mIconRect, null);
 		int alpha = (int) Math.ceil(255*mAlpha);
-		//ÔÚÄÚ´æÈ¥×¼±¸mBitmap¡¢Alpha¡¢´¿É«¡¢xfermode¡¢Í¼±ê
+		//åœ¨å†…å­˜å»å‡†å¤‡mBitmapã€Alphaã€çº¯è‰²ã€xfermodeã€å›¾æ ‡
 		setupTargetBitmap(alpha);
-		//»æÖÆÔ­ÎÄ±¾
+		//ç»˜åˆ¶åŸæ–‡æœ¬
 		drawSourceText(canvas, alpha);
-		//»æÖÆ±äÉ«µÄÎÄ±¾
+		//ç»˜åˆ¶å˜è‰²çš„æ–‡æœ¬
 		drawTargetText(canvas, alpha);
 		canvas.drawBitmap(mBitmap, 0, 0,null);
 	}
-	//ÔÚÄÚ´æÖĞ»æÖÆ¿ÉÒÔ±äÉ«µÄicon
+	//åœ¨å†…å­˜ä¸­ç»˜åˆ¶å¯ä»¥å˜è‰²çš„icon
 	private void setupTargetBitmap(int alpha) {
 		mBitmap = Bitmap.createBitmap(getMeasuredWidth(), 
 				getHeight(), Config.ARGB_8888);
 		mCanvas = new Canvas(mBitmap);
 		mPaint = new Paint();
-		mPaint.setColor(mColor);    //ÉèÖÃ´¿É«
-		mPaint.setAntiAlias(true);  //ÉèÖÃ¿¹¾â³İ
-		mPaint.setDither(true);     //ÉèÖÃ¶¶¶¯
-		mPaint.setAlpha(alpha);     //ÉèÖÃÍ¸Ã÷¶È
+		mPaint.setColor(mColor);    //è®¾ç½®çº¯è‰²
+		mPaint.setAntiAlias(true);  //è®¾ç½®æŠ—é”¯é½¿
+		mPaint.setDither(true);     //è®¾ç½®æŠ–åŠ¨
+		mPaint.setAlpha(alpha);     //è®¾ç½®é€æ˜åº¦
 		mCanvas.drawRect(mIconRect, mPaint);
 		mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));
 		mPaint.setAlpha(255);
 		mCanvas.drawBitmap(mIconBitmap, null, mIconRect, mPaint);
 	}
 	/**
-	 * »æÖÆÔ­ÎÄ±¾
+	 * ç»˜åˆ¶åŸæ–‡æœ¬
 	 * @param canvas
 	 * @param alpha
 	 */
@@ -139,7 +139,7 @@ public class ChangeColorOfBottomView extends View {
 		canvas.drawText(mText, x, y, mTextPaint);
 	}
 	/**
-	 * »æÖÆ±äÉ«ÎÄ±¾
+	 * ç»˜åˆ¶å˜è‰²æ–‡æœ¬
 	 * @param canvas
 	 * @param alpha
 	 */
@@ -168,18 +168,18 @@ public class ChangeColorOfBottomView extends View {
 		}
 		super.onRestoreInstanceState(state);
 	}
-	//Íâ½ç¿ÉÉèÖÃalpha
+	//å¤–ç•Œå¯è®¾ç½®alpha
 	public void setIconAlpha(float alpha){
 		this.mAlpha = alpha;
 		invalidateView();
 	}
-	//ViewÖØ»æ
+	//Viewé‡ç»˜
 	private void invalidateView() {
 		if(Looper.getMainLooper() == Looper.myLooper()){
-			//Ö÷Ïß³ÌÖØ»æµ÷ÓÃ´Ë·½·¨
+			//ä¸»çº¿ç¨‹é‡ç»˜è°ƒç”¨æ­¤æ–¹æ³•
 			invalidate();
 		}else{
-			//×ÓÏß³ÌÖØ»æµ÷ÓÃ´Ë·½·¨
+			//å­çº¿ç¨‹é‡ç»˜è°ƒç”¨æ­¤æ–¹æ³•
 			postInvalidate();
 		}
 	}
