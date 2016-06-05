@@ -2,8 +2,12 @@
   
   
 # Features
-- 修改ActionBar的overflowButton的图标；
-- Viewpager+Fragment+ListView；
-- 网络图片加载并缓存再用防止重复加载，加入自定义下拉刷新和底部分页；
-- 自定义View实现底部Tab颜色随点击变化；
-- ContentProvider读取本地联系人等。
+- 主界面自定义ActionBar的overflowButton的图标+Viewpager+Fragment+自定义View实现底部Tab颜色随点击变化；
+
+- fragment1：内嵌ListView，进行网络图片加载并缓存再用，防止重复加载；
+
+- fragment2：内嵌ListView模拟聊天界面，并加入自定义下拉刷新和底部分页增加item；
+
+- fragment3：内嵌ListView显示联系人，通过ContentProvider读取本地手机联系人；
+
+- fragment4：常见设置界面。
