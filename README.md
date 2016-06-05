@@ -3,7 +3,7 @@
   
 # Features
 - 主界面自定义ActionBar的overflowButton的图标+Viewpager+Fragment+自定义View实现底部Tab颜色随点击变化；
-
+![image](https://github.com/zdhcristy/Ichat/raw/master/ assets / 主页.png )
 - fragment1：内嵌ListView，进行网络图片加载并缓存再用，防止重复加载；
 
 - fragment2：内嵌ListView模拟聊天界面，并加入自定义下拉刷新和底部分页增加item；
