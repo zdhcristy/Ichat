@@ -17,3 +17,7 @@
 - fragment3：内嵌ListView显示联系人，通过ContentProvider读取本地手机联系人；
 
 - fragment4：常见设置界面。
+
+# Thanks
+- 感谢所有网上通过博客、Github、论坛、视频教学等途径分享经验的所有人；
+- 希望看到和下载使用的你也拥抱开源、乐于分享。
