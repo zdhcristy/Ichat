@@ -16,11 +16,11 @@ import android.widget.TextView;
 import java.util.List;
 
 import com.example.ichat.ChatListView;
-import com.example.ichat.ImageLoader;
 import com.example.ichat.R;
 import com.example.ichat.R.id;
 import com.example.ichat.R.layout;
 import com.example.ichat.bean.FindItem;
+import com.example.ichat.util.ImageLoader;
 
 public class FindAdapter extends BaseAdapter implements OnScrollListener{
 

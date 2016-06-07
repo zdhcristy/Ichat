@@ -10,7 +10,9 @@ import com.example.ichat.adapter.MsgAdapter;
 import com.example.ichat.bean.Msg;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -29,8 +31,10 @@ public class ChatActivity extends Activity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 		setContentView(R.layout.activity_chat);
+		Intent intent = getIntent();
+		setTitle(intent.getStringExtra("label"));
 		initMsgs();
 		initViews();
 		msgAdapter = new MsgAdapter(ChatActivity.this, R.layout.activity_chat_item, msgList);
@@ -66,5 +70,15 @@ public class ChatActivity extends Activity{
 		msgList.add(msg2);
 		msgList.add(msg3);
 		msgList.add(msg4);
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			finish();
+			break;
+		}
+		return super.onOptionsItemSelected(item);
 	}
 }

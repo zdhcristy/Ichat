@@ -1,4 +1,4 @@
-package com.example.ichat;
+package com.example.ichat.util;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -18,6 +18,8 @@ import java.net.URL;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.example.ichat.R;
+import com.example.ichat.R.drawable;
 import com.example.ichat.adapter.FindAdapter;
 
 public class ImageLoader {

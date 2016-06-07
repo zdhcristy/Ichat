@@ -26,6 +26,7 @@ import com.example.ichat.ChatListView;
 import com.example.ichat.R;
 import com.example.ichat.adapter.FindAdapter;
 import com.example.ichat.bean.FindItem;
+import com.example.ichat.util.Utility;
 
 public class FindFragment extends Fragment{
 	
@@ -34,6 +35,7 @@ public class FindFragment extends Fragment{
     private FindAdapter mAdapter;
     private List<FindItem> newsBeanList;
     private FindItem newsBean;
+    private boolean isConnectNetwork;
 	
 	@Override
 	@Nullable
@@ -42,8 +44,12 @@ public class FindFragment extends Fragment{
 		View view = inflater.inflate(R.layout.fragment_find, container , false);
 		mListView = (ListView) view.findViewById(R.id.lv_find);
 		newsBeanList = new ArrayList<FindItem>();
-		
-		new NewsAsyncTask().execute(URL);
+		isConnectNetwork = Utility.checkNetworkConnection(getContext());
+		if(isConnectNetwork){
+			new NewsAsyncTask().execute(URL);
+		}else{
+			Utility.noNetworkAlert(getContext());
+		}
 		return view;
 	}
 

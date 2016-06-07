@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- 欢迎界面 -->
+    <string name="welcome_text1">Ichat | </string>
+    <string name="welcome_text2">沟通无限</string>
+    
     <string name="app_name">Ichat</string>
+    <string name="chat_activity_name">某某</string>
+    
     <string name="action_search">查找</string>
     <string name="action_add">添加</string>
     <string name="item_group_chat">发起聊天</string>
@@ -13,8 +19,5 @@
     <string name="bottom_menu_find">发现</string>
     <string name="bottom_menu_contacts">通讯录</string>
     <string name="bottom_menu_me">我</string>
-    
-    <string name="welcome_text1">Ichat | </string>
-    <string name="welcome_text2">沟通无限</string>
 
 </resources>
